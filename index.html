@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Tyler Porter's Profile</title>
+    <title>The Code Review</title>
     <link rel="icon" 
           type="image/png" 
           href="images/fav.png" />
@@ -16,27 +16,38 @@
       <h1>The Code Review</h1>
       <div class="wrapper">
         <h2>Signup for our newsletter</h2>
-        <h3 class="tagline">Get the latest news on how your code is doing right in your inbox</h3>
+        <p class="tagline">Get the latest news on how your code is doing right in your inbox</p>
       </div>
     </header>
     <main>
-      <div class="wrapper">
+      <div class="wrapper form">
         <form action="#">  
-          <fieldset Class="contact-info">
+          <fieldset Class="contact-info cf">
             <legend class="title">Contact Information</legend>
+            <div class="item">
               <Label for="fullname">Full Name</label>
               <input id="fullname" type="text" name="fullname" placeholder="Required" required><br>
+            </div>
+            <div class="item">
               <Label for="Email">Email Address</label>
               <input id="Email" type="email" name="Email" placeholder="Required" required><br>
+            </div>
+            <div class="item">
               <Label for="Phone">Phone Number</label>
               <input id="Phone" type="tel" name="Phone"><br>
+            </div>
+            <div class="item">
               <Label for="Address">Street Address</label>
               <input id="Address" type="text" name="Address"><br>
-              <Label for="userinfo">City</label>
+            </div>
+            <div class="item">
+              <Label for="City">City</label>
               <input id="City" type="text" name="City"><br>
+            </div>
+            <div class="item">
               <Label for="State">State</label>
-              <select id="State"class="state" name="state" size="1">
-                <option value="Choose State" disabled selected>Choose State</option>
+              <select id="State" class="state" name="state" size="1">
+                <option value="Choose State" class="disabled" disabled selected>Choose State</option>
                 <option value="AK">AK</option>
                 <option value="AL">AL</option>
                 <option value="AR">AR</option>
@@ -89,35 +100,51 @@
                 <option value="WV">WV</option>
                 <option value="WY">WY</option>
               </select><br>
+            </div>
+            <div class="item">  
               <label for="Zip">Zip Code</label>
               <input id="Zip" type="number" name="Zip"><br>
+            </div> 
           </fieldset>
-          <fieldset class="newsletter">
+          <hr>
+          <fieldset class="newsletter ">
             <legend class="news-title">Newsletter</legend>
-            <legend>Select the newsletter you would like to receive</legend><br>
-            <label for="cbox1">
-              <input type="checkbox" id="cbox1" value="first_checkbox"> HTML News
-            </label><br>
-            <label for="cbox2">
-              <input type="checkbox" id="cbox2" value="second_checkbox"> CSS News
-            </label><br>
-            <label for="cbox3">  
-              <input type="checkbox" id="cbox3" value="second_checkbox">Javascript News
-            </label><br>
-            <p>Newsletter Format</p>
-            <label for="cbox4">
-              <input class="roundbutton" type="radio" id="cbox4" value="first_checkbox"> HTML
-            </label><br>
-            <label for="cbox5">
-              <input class="roundbutton" type="radio" id="cbox5" value="second_checkbox"> Plain Text
-            </label><br><br>
-            <p>Other topics you would like to hear about</p>
-              <textarea type="textarea" name="comments"></textarea><br><br>
-              <button>Sign Up</button>     
+              <p>Select the newsletter you would like to receive</p>
+              <div class="item no-float"><input type="checkbox" id="cbox1" value="first_checkbox"><label for="cbox1">HTML News</label></div>
+              <div class="item no-float"><input type="checkbox" id="cbox2" value="second_checkbox"> 
+              <label for="cbox2">CSS News</label></div>
+              <div class="item no-float"><input type="checkbox" id="cbox3" value="second_checkbox">
+              <label for="cbox3">Javascript News</label></div>
+              <br>
+              <p>Newsletter Format</p>
+              <div class="item no-float"><input class="roundbutton" name="radio" type="radio" id="cbox4" value="first_checkbox"><label for="cbox4">HTML</label></div>
+              <div class="item no-float"><input class="roundbutton" name="radio" type="radio" id="cbox5" value="second_checkbox"><label for="cbox5">Plain Text</label></div><br>
+              <p>Other topics you would like to hear about</p>
+              <br>
+              <textarea name="comments"></textarea><br><br>
+              <button class="button">Sign Up</button>     
           </fieldset> 
         </form>
       </div> <!--.wrapper--> 
     </main>
+    <footer>
+      <p class="copyright">The Code Review</p>
+    </footer>
+    <script type="text/javascript">
+        var allRadios = document.getElementsByName('radio');
+        var booRadio;
+        var x = 0;
+        for(x = 0; x < allRadios.length; x++){
 
+            allRadios[x].onclick = function() {
+                if(booRadio == this){
+                    this.checked = false;
+                    booRadio = null;
+                }else{
+                    booRadio = this;
+                }
+            };
+        }
+    </script>
   </body>
 </html>
