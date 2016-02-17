@@ -21,8 +21,8 @@
     </header>
     <main>
       <div class="wrapper form">
-        <form action="#">  
-          <fieldset Class="contact-info cf">
+        <form action="#" method="POST">  
+          <fieldset class="contact-info clearfix">
             <legend class="title">Contact Information</legend>
             <div class="item">
               <Label for="fullname">Full Name</label>
@@ -130,21 +130,5 @@
     <footer>
       <p class="copyright">The Code Review</p>
     </footer>
-    <script type="text/javascript">
-        var allRadios = document.getElementsByName('radio');
-        var booRadio;
-        var x = 0;
-        for(x = 0; x < allRadios.length; x++){
-
-            allRadios[x].onclick = function() {
-                if(booRadio == this){
-                    this.checked = false;
-                    booRadio = null;
-                }else{
-                    booRadio = this;
-                }
-            };
-        }
-    </script>
   </body>
 </html>

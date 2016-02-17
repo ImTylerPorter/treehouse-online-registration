@@ -48,12 +48,12 @@ a:hover {
   width: 90%;
   margin:0 auto;
 }
-.cf:before, .cf:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
 
-.cf:after {
+.clearfix:after {
   clear: both;
 }
 .center {
@@ -137,7 +137,6 @@ input:focus, textarea:focus{
 select{
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     padding-left: 5%;
     background: url("../images/arrow.svg") 95% 50% no-repeat;
     background-color: #eff0f1;
@@ -151,7 +150,6 @@ input[type='checkbox'] {
     vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     border-radius: .3em; 
     margin-right: .5em;   
 }
@@ -169,7 +167,6 @@ input[type='radio'] {
     vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
     border-radius: 100%; 
     margin-right: .5em;   
 }
