@@ -113,7 +113,8 @@ input, select {
   outline: 0;
 }
 input[name="Zip"] {
-  width: 50%
+  width: 50%;
+  display: block;
 }
 textarea {
   min-height: 100px;
@@ -122,6 +123,7 @@ textarea {
   border-radius: 0.5em;
   border: none;
   outline: 0;
+  margin-bottom: 1.4em;
 }
 input::-webkit-input-placeholder  {
   color: #adb2b7;
@@ -188,9 +190,14 @@ input[type='checkbox'] + label:after, input[type='radio'] + label:after{
 }
 
 .newsletter p {
-  margin: 0;
+  margin-top:1em;
 }
 
+.other-topics {
+  width: 100%;
+  margin-bottom: 1em;
+  display: block;
+}
 .button {
   width: 100%;
   padding: 1.3rem 0;
@@ -230,9 +237,12 @@ footer{
 
   .item{
     height: 50px;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
   }
 
+.other-topics {
+  margin-bottom: .5em;
+} 
   label {
     float: left;
     display: inline-block;
@@ -246,6 +256,7 @@ footer{
     display: inline-block;
     width: 80%;
     margin: 0;
+    padding: 0 1.5%;
     vertical-align: middle;
   }
   input[name="Zip"] {
